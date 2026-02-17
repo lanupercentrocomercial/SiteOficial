@@ -1,6 +1,10 @@
 /**
  * Lanuper Centro Comercial - Lógica do Site
+<<<<<<< HEAD
  * Desenvolvedor: [Seu Nome/AI]
+=======
+ * Desenvolvedor: Greice Lacerda
+>>>>>>> 6651b99ad816c0d47fe6f1d6f089e5a18b727ab3
  */
 
 // 1. Função para abrir informações adicionais (Modais Simples)
@@ -71,4 +75,8 @@ window.addEventListener('scroll', () => {
 
 // 4. Log de Inicialização
 console.log("🚀 Lanuper Web App carregado com sucesso.");
+<<<<<<< HEAD
 console.log("Identidade visual: Roxo/Laranja/Vermelho aplicada.");
+=======
+console.log("Identidade visual: Roxo/Laranja/Vermelho aplicada.");
+>>>>>>> 6651b99ad816c0d47fe6f1d6f089e5a18b727ab3

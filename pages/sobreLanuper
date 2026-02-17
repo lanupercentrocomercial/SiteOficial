@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Lanuper | Centro Comercial Itambi</title>
+    <link rel="stylesheet" href="../styles/comuns.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/LanuperTranp2026.jpg" alt="Lanuper Logo" class="logo-large">
+
+            <nav class="navbar-tabs">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="tab">Início</a></li>
+                    <li><a href="#sobre" class="tab active">Sobre o Lanuper</a></li>
+                    <li><a href="index.html#lojas" class="tab">Lojas</a></li>
+                    <li><a href="index.html#workshops" class="tab">Workshops</a></li>
+                    <li><a href="index.html#vitrine" class="tab">Vitrine & Eventos</a></li>
+                    <li><a href="#contato" class="tab">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="about-section">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>Nossa História</h2>
+                    <p class="highlight-text">Inovação e compromisso com o desenvolvimento de Itambi.</p>
+                    <p>
+                        O <strong>Lanuper Centro Comercial</strong> nasceu do desejo de criar um espaço único que aliasse conveniência, 
+                        serviços modernos e capacitação profissional. Localizado no coração de Itambi, o Lanuper 
+                        se destaca como um hub de soluções para moradores e empreendedores.
+                    </p>
+                    <p>
+                        Nossa infraestrutura foi pensada para oferecer segurança e conforto, proporcionando um 
+                        ambiente onde negócios prosperam e pessoas se transformam através do conhecimento.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="images/LanuperFachadaSite.jpg" alt="Estrutura Lanuper">
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-cards" style="background: rgba(255,255,255,0.5); border-radius: 30px;">
+            <div class="card">
+                <i class="fas fa-bullseye card-icon"></i>
+                <h3>Missão</h3>
+                <p>Prover soluções de comércio e serviços de excelência, fomentando o empreendedorismo local e a capacitação técnica dos cidadãos de Itambi.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-eye card-icon"></i>
+                <h3>Visão</h3>
+                <p>Ser reconhecido como o principal centro de referência comercial e educacional da região, impulsionando o crescimento econômico sustentável.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-gem card-icon"></i>
+                <h3>Valores</h3>
+                <ul style="list-style: none; color: #555; font-size: 0.9rem;">
+                    <li>✔ Integridade e Transparência</li>
+                    <li>✔ Valorização da Comunidade</li>
+                    <li>✔ Inovação Constante</li>
+                    <li>✔ Excelência no Atendimento</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <i class="fas fa-users card-icon"></i>
+                <h3>Comunidade</h3>
+                <p>Acreditamos que o sucesso do Lanuper está diretamente ligado ao sucesso de cada cliente, aluno e parceiro lojista que faz parte da nossa história.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="footer-info">
+            <p><i class="fas fa-map-marker-alt"></i> R. Carlos Alberto Ferreira da Silva, L.1, Q.24 - Itambi</p>
+            <p><i class="fas fa-phone"></i> (21) 96940-9553 | (21) 98887-4861</p>
+            <p><i class="fas fa-envelope"></i> lanupercentrocomercial@gmail.com</p>
+            <p class="copyright">&copy; 2026 Lanuper Centro Comercial - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/index.js"></script>
+</body>
+
+</html>
