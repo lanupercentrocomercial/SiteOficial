@@ -43,7 +43,8 @@ Sua opinião é fundamental para o crescimento do Lanuper! Queremos ouvir você:
 
 ## 📍 Onde nos encontrar
 **Endereço:** Rua Carlos Alberto Ferreira da Silva, s/n , Quadra 25, Lote 1 - Itambi, Itaboraí - RJ.
-**E-mail:** lanupernitcopd@gmail.com
+**E-mail:** lanupercentrocomercial@gmail.com
 
 ---
 *Este projeto é mantido pelo Greice Lacerda, administradora do Lanuper Centro Comercial. Inovação e Praticidade.*
+
