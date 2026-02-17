@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanuper Centro Comercial | Itambi</title>
+    <link rel="stylesheet" href="styles/comuns.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/LanuperTranp2026.jpg" alt="Lanuper Logo" class="logo-large">
+
+            <nav class="navbar-tabs">
+                <ul class="nav-links">
+                    <li><a href="#sobre" class="tab">Sobre o Lanuper</a></li>
+                    <li><a href="#lojas" class="tab active">Lojas</a></li>
+                    <li><a href="#servicos" class="tab">Serviços</a></li>
+                    <li><a href="#workshops" class="tab">Workshops</a></li>
+                    <li><a href="#vitrine" class="tab">Vitrine & Eventos</a></li>
+                    <li><a href="#contato" class="tab">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Inovação e praticidade para você!</h1>
+            <p>Tudo o que você precisa em um só lugar em Itambi.</p>
+        </section>
+
+        <section class="grid-cards">
+            <div class="card" id="servicos-info">
+                <i class="fas fa-credit-card card-icon"></i>
+                <h3>Serviços</h3>
+                <p>Pagamento de contas, recargas de celular e de cartão de transporte.</p>
+                <br><strong>Visite nossa loja!</strong>
+                <button class="btn">Ver Lista</button>
+            </div>
+
+            <div class="card" id="lojas-info">
+                <img src="images/LanuperAluguelLojas.png" alt="Lanuper Lojas" class="logo-pequeno">
+                <h3>Aluguel de Lojas</h3>
+                <p>Espaços comerciais estratégicos para o seu negócio decolar.</p>
+                <br><strong>Abra a sua loja!</strong>
+                <button class="btn">Saber Mais</button>
+            </div>
+
+            <div class="card" id="workshops-info">
+                <img src="images/LanuperWorkshops1.png" alt="Lanuper Cursos" class="logo-pequeno">
+                <h3>Cursos Profissionalizantes</h3>
+            
+                <p class="card-list">
+            
+                <div class="date-badge">Início: 07 de Março</div>
+            
+                <p>Capacitação técnica para gerar renda. <br><strong>Garanta sua vaga!</strong></p>
+            
+                <button class="btn" onclick="location.href='#contato'">Quero me inscrever</button>
+            </div>
+
+            <div class="card" id="eventos-info">
+                <img src="images/LanuperFestaEventos4.png" alt="Lanuper eventos" class="logo-pequeno">
+                <h3>Aluguel de Espaço</h3>
+                <p>Espaço com infraestrutura completa para sua festa ou reunião. <br><strong>(Em breve)</strong>
+                <button class="btn">Saber Mais</button>
+            </div>
+        </section>
+
+        <section id="vitrine" class="partners-section">
+            <h2>Conheça nossas Lojas e Eventos</h2>
+            <p class="subtitle">Visite nossos parceiros e conheça nosso espaço para festas</p><br>
+
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <img src="images/CineaArtesanatos2.jpg" alt="Loja Parceira" id="eventosCinea">
+                    <div class="partner-overlay">
+                        <div class="partner-desc">
+                            <h3>Loja de Artesanatos para Decoração</h3>
+                            <p>Os melhores trabalhos para a decoração de sua casa aqui no Lanuper.</p>
+                            <a href="https://site-da-loja.com" target="_blank" class="btn-visit">Visite o Site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partner-card">
+                    <img src="images/LogoMarca_AFTeck3.png" alt="Loja Parceira" id="eventosAFTeck">
+                    <div class="partner-overlay">
+                        <div class="partner-desc">
+                            <h3>Montagem e Manutenção</h3>
+                            <p>Especialistas em computadores, impressoras, consoles e outras tecnologias para você.</p>
+                            <a href="https://site-da-loja.com" target="_blank" class="btn-visit">Visite o Site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partner-card">
+                    <img src="images/LanuperFestaEventos1.jpg" alt="Salão de Eventos" id="eventosLogo">
+                    <div class="partner-overlay">
+                        <div class="partner-desc">
+                            <h3>Salão de Eventos</h3>
+                            <p>Espaço amplo com infraestrutura completa para sua festa ou reunião.</p>
+                            <a href="#contato" class="btn-visit"><b>Em breve</b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="footer-info">
+            <p><i class="fas fa-map-marker-alt"></i> R. Carlos Alberto Ferreira da Silva, L.1, Q.24 - Itambi</p>
+            <p><i class="fas fa-phone"></i> (21) 96940-9553 | (21) 98887-4861</p>
+            <p><i class="fas fa-envelope"></i> lanupercentrocomercial@gmail.com</p><br>
+            <p class="copyright">&copy; 2026 Lanuper Centro Comercial - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/index.js"></script>
+</body>
+
+</html>
