@@ -1,0 +1,10 @@
+
+#eventosCinea,
+#eventosAFTeck{
+    width: 360px;
+    height: 300px;
+    object-fit: cover;
+    /* Logos de parceiros devem aparecer completas */
+    /* Fundo branco para logos com transparência */
+    margin: 0px auto;
+}
