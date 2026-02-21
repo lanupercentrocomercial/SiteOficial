@@ -1,36 +1,36 @@
-/* Configuração da Grade de 2 Colunas */
+/* ===================================================
+   CONFIGURAÇÃO DA GRADE DE WORKSHOPS (CARDS)
+   =================================================== */
 .workshops-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* Cria as duas colunas iguais */
+    /* Mantém 4 colunas no desktop */
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    /* Espaço entre os cards */
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* Ajuste nos cards para ficarem verticais na coluna */
+/* --- CARDS DOS WORKSHOPS --- */
 .workshop-detail-card {
     display: flex;
     flex-direction: column;
-    /* Foto em cima, texto embaixo */
     background: white;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     height: 100%;
-    /* Garante que todos tenham a mesma altura */
+    /* Garante que todos os cards da linha tenham a mesma altura */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.ws-image img {
-    width: 80%;
-    height: 250px;
-    object-fit: cover;
-    /* Faz a imagem preencher o espaço sem distorcer */
+.workshop-detail-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Container do Ícone no topo do Card */
+/* Cabeçalho do Card (Ícone/Emoji) */
 .ws-icon-header {
     width: 100%;
     height: 150px;
@@ -38,7 +38,6 @@
     justify-content: center;
     align-items: center;
     font-size: 4.5rem;
-    /* Tamanho do Emoji */
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -51,77 +50,59 @@
     transform: scale(1.15) rotate(5deg);
 }
 
-/* Garante que o card se comporte bem na grade */
-/* 1. O card precisa ter altura total e ser flex */
-.workshop-detail-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    /* Garante que todos os cards na linha tenham a mesma altura */
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    text-align: center;
-}
-
-/* 2. A área de texto deve ocupar o espaço restante */
+/* Área de Informações Internas */
 .ws-info {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 25px;
     flex-grow: 1;
-    /* Faz esta div esticar para ocupar todo o espaço vertical disponível */
+    /* Estica para empurrar o botão para o rodapé do card */
 }
 
-/* 3. O botão é "empurrado" para o fim */
+.badge-vagas {
+    color: #E94C4C;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.work-text-cards {
+    padding: 5px 0;
+    color: #0c09ed;
+    font-size: 0.95rem;
+}
+
+/* Botão Alinhado na Base */
 .btn-ws {
     margin-top: auto;
-    /* Isso joga o botão para o final da div ws-info */
+    /* Alinhamento automático na base */
     align-self: center;
-    /* Centraliza o botão horizontalmente */
     width: fit-content;
-    /* Faz o botão ter o tamanho apenas do texto */
     padding: 12px 25px;
+    background-color: #E94C4C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.workshop-detail-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
+/* ===================================================
+   HERO SECTION (TOPO)
+   =================================================== */
 .workshops-hero {
     position: relative;
-    min-height: 150px;
-    max-height: 230px;
+    min-height: 250px;
     display: flex;
     flex-direction: row;
-    /* Coloca lado a lado */
     justify-content: center;
     align-items: center;
     gap: 40px;
-    /* Espaçamento entre a imagem e o texto */
-    padding: 40px 5%;
+    padding: 60px 5%;
     overflow: hidden;
     background: #fff;
-}
-
-.work-cards {
-    background: #E94C4C;
-    color: rgb(230, 7, 7);
-    border-radius: 25px;
-    display: inline-block;
-    margin: 0 auto;
-    justify-content: center;
-    transition: background 0.3s ease;
-}
-
-.badge-vagas{
-    color: red;
-    font-weight: bold;
-}
-.work-text-cards {
-    padding: 0px 25px;
-    color:#0c09ed
 }
 
 #particle-canvas {
@@ -133,7 +114,6 @@
     z-index: 1;
 }
 
-/* Garante que o conteúdo fique acima do canvas */
 .hero-image-container,
 .hero-text {
     position: relative;
@@ -141,41 +121,67 @@
 }
 
 .hero-image {
-    margin-top: 170px;
     max-width: 300px;
-    /* Ajuste o tamanho da imagem conforme necessário */
     height: auto;
     display: block;
 }
 
 .hero-text {
-    margin-top: 20px;
     max-width: 500px;
-    text-align: justify;
-    /* Alinhamento à esquerda combina melhor com layout lado a lado */
 }
 
 .hero-text h1 {
     font-size: 2.6rem;
-    margin: 0 0 10px 0;
+    margin-bottom: 15px;
     color: #E94C4C;
-    line-height: 1.1;
 }
 
-.hero-text h3 {
-    font-size: 1.3rem;
-    font-weight: normal;
-    margin: 0;
-    color: #444;
+/* ===================================================
+   SEÇÃO CONCURSO (MATEMÁTICA) - 4 COLUNAS
+   =================================================== */
+.concurso-section {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    /* Força 4 colunas */
+    gap: 20px;
+    align-items: center;
+    width: 90% !important;
+    max-width: 1200px;
+    margin: 50px auto !important;
+    /* Remove o margin fixo que esmagava no mobile */
+    padding: 40px 20px !important;
+    background-color: rgba(0, 255, 255, 0.108);
+    border-radius: 25px;
 }
 
-/* --- RESPONSIVIDADE (Celulares) --- */
+.concurso-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ===================================================
+   RESPONSIVIDADE (MOBILE & TABLET)
+   =================================================== */
+
+/* Ajuste para Tablets (2 colunas para não esmagar) */
+@media (max-width: 1024px) {
+
+    .workshops-grid,
+    .concurso-section {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Ajuste para Celulares (1 coluna) */
 @media (max-width: 768px) {
+
+    /* Hero */
     .workshops-hero {
         flex-direction: column;
-        /* No celular, volta a ficar um em cima do outro */
         text-align: center;
-        gap: 20px;
+        padding: 40px 20px;
+        min-height: auto;
     }
 
     .hero-text {
@@ -183,13 +189,33 @@
     }
 
     .hero-image {
-        max-width: 200px;
+        max-width: 180px;
+        margin: 0 auto;
     }
-}
 
-/* Responsividade: Volta para 1 coluna em celulares */
-@media (max-width: 800px) {
-    .workshops-grid {
-        grid-template-columns: 1fr;
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    /* Grids (Workshops e Concursos) */
+    .workshops-grid,
+    .concurso-section {
+        grid-template-columns: 1fr !important;
+        /* Força 1 coluna apenas */
+        width: 95% !important;
+        padding: 30px 15px !important;
+        gap: 25px;
+    }
+
+    /* Ajuste específico para a lista de concursos no mobile */
+    .concurso-section ul {
+        padding-left: 20px !important;
+        margin: 10px auto !important;
+        text-align: left;
+        display: inline-block;
+    }
+
+    .concurso-title {
+        font-size: 1.2rem !important;
     }
 }

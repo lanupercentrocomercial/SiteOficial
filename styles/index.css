@@ -1,96 +1,51 @@
-
-#eventosCinea,
-#eventosAFTeck{
-    width: 360px;
-    height: 300px;
-    object-fit: cover;
-    /* Logos de parceiros devem aparecer completas */
-    /* Fundo branco para logos com transparência */
-    margin: 0px auto;
-}
-
-/* Estilos para a Seção de Depoimentos */
-.depoimentos-section {
-    padding: 60px 5%;
-    background-color: #fdfdfd;
-    text-align: center;
-}
-
-
-.depoimentos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.depoimento-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    text-align: left;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    border-bottom: 4px solid #E94C4C;
-    transition: 0.3s;
-}
-
-.depoimento-card:hover {
-    transform: translateY(-5px);
-}
-
-.depoimento-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.user-icon {
-    font-size: 2rem;
-    background: #f0f0f0;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.depoimento-header h4 {
-    margin: 0;
-    color: #333;
-}
-
-.depoimento-header small {
-    color: #888;
-    font-size: 0.8rem;
-}
-
-.depoimento-texto {
-    font-style: italic;
-    color: #555;
-    line-height: 1.6;
-}
-
-.loading-msg {
-    color: #888;
-    font-style: italic;
-}
-
-.concurso-section{
-    width: 85%;
-    max-height: 380px;
-    margin: 0 auto;
-    padding: 60px 5%;
+/* --- Seção de Concursos (Desktop - 4 Colunas) --- */
+.concurso-section {
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px 2%;
     background: linear-gradient(to bottom, #ffffff, #d5f4f8);
     border-bottom: #E94C4C 8px solid;
     border-radius: 25px;
-    text-align: center;
     color: #E94C4C;
+
+    /* Configuração de Grid para 4 colunas iguais */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: center;
+    /* Alinha o conteúdo verticalmente ao centro */
 }
 
-.concurso-title{
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+/* Ajuste das imagens internas para não quebrarem o grid */
+.concurso-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* --- RESPONSIVIDADE (Mobile - 1 Coluna) --- */
+@media (max-width: 900px) {
+    .concurso-section {
+        /* Muda de 4 colunas para apenas 1 */
+        grid-template-columns: 1fr;
+        width: 100%;
+        border-radius: 0;
+        /* Remove arredondamento lateral no celular para ganhar espaço */
+        padding: 40px 20px;
+    }
+
+    /* Ajuste de margens internas no mobile */
+    .concurso-section div {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Remove o padding lateral exagerado da lista no mobile */
+    .concurso-section ul {
+        padding-left: 20px !important;
+        margin: 15px auto !important;
+        display: inline-block;
+        /* Mantém a lista centralizada mas com texto alinhado */
+        text-align: left;
+    }
 }
