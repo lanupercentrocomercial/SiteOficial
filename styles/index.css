@@ -49,3 +49,52 @@
         text-align: left;
     }
 }
+
+/* Estilo do Banner Promocional */
+.promo-banner {
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1001;
+    overflow: hidden;
+}
+
+.promo-content {
+    display: inline-block;
+    animation: pulse 2s infinite; /* Movimento de pulsação */
+}
+
+.promo-link {
+    background: white;
+    color: #ff416c;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.promo-link:hover {
+    background: #eeeeee;
+    transform: scale(1.05);
+}
+
+/* Animação de Movimento */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+    .promo-banner { font-size: 0.8rem; padding: 15px 5px; }
+    .promo-link { display: block; margin: 8px auto 0; width: fit-content; }
+}
