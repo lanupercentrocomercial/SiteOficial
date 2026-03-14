@@ -11,7 +11,8 @@
     text-align: center;
     align-items: center;
     margin: 0px auto;
-    background: #fff;
+    background: #e8ed8b;
+    padding: 10px 20px;
 }
 .hero-content-side h1 {
     font-size: 2.5rem;
