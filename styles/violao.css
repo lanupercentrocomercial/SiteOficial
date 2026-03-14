@@ -1,0 +1,104 @@
+/* --- VIOLAO.CSS --- */
+.course-hero.music {
+    background: linear-gradient(135deg, #4e342e, #8d6e63);
+    /* Tons amadeirados de violão */
+    padding: 60px 20px;
+    color: white;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 5%;
+}
+
+/* Tabela de Horários - Seguindo padrão Lanuper */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #4e342e;
+}
+
+.schedule-table th {
+    background-color: #4e342e;
+    color: white;
+    padding: 15px;
+}
+
+.schedule-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+/* Timeline Musical */
+.timeline {
+    border-left: 4px solid #8d6e63;
+    padding-left: 25px;
+    margin: 30px 0;
+}
+
+.step::before {
+    background: #4e342e;
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border: 4px solid white;
+    border-radius: 50%;
+}
+
+/* Side Card Estilo Sticky */
+.side-card {
+    position: sticky;
+    top: 100px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid #4e342e;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.value {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #e31e24;
+    margin: 10px 0;
+}
+
+.btn-enroll {
+    width: 100%;
+    padding: 15px;
+    background: #25d366;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enroll:hover {
+    background: #128c7e;
+}
+
+@media (max-width: 900px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .side-card {
+        position: static;
+    }
+}

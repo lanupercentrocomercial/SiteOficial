@@ -116,6 +116,7 @@
 
 .hero-image-container,
 .hero-text {
+    text-align:center;
     position: relative;
     z-index: 2;
 }
@@ -127,7 +128,7 @@
 }
 
 .hero-text {
-    max-width: 500px;
+    max-width: 800px;
 }
 
 .hero-text h1 {
@@ -141,8 +142,8 @@
    =================================================== */
 .concurso-section {
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    /* Força 4 colunas */
+    grid-template-columns: repeat(3, 1fr) !important;
+    /* Força 3 colunas */
     gap: 20px;
     align-items: center;
     width: 90% !important;

@@ -1,0 +1,206 @@
+/* --- WORKSHOPS.CSS --- */
+
+/* --- Hero Section --- */
+.workshops-hero {
+    position: relative;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-purple), #2a0845);
+    overflow: hidden;
+    color: white;
+}
+
+#particle-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+.hero-image-container {
+    z-index: 2;
+    margin-right: 30px;
+}
+
+.hero-image {
+    max-height: 350px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    transition: transform 0.5s ease;
+}
+
+.hero-image:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.hero-text {
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 0px var(--primary-orange);
+}
+
+/* --- Grid de Workshops --- */
+.workshops-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 50px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- Workshop Detail Card --- */
+.workshop-detail-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.workshop-detail-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(106, 42, 148, 0.15);
+}
+
+.ws-icon-header {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    position: relative;
+}
+
+.ws-main-emoji {
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+}
+
+.ws-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.ws-info h2 {
+    color: var(--primary-purple);
+    font-size: 1.4rem;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.ws-info p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* Badge de Vagas */
+.badge-vagas {
+    background: var(--primary-red);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    width: fit-content;
+    animation: flash 2s infinite;
+}
+
+/* Detalhes do Curso (Ícones) */
+.ws-details {
+    margin-top: auto;
+    border-top: 1px dashed #ddd;
+    padding-top: 15px;
+}
+
+.work-text-cards {
+    font-size: 0.85rem !important;
+    color: #444 !important;
+    margin-bottom: 8px !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.work-text-cards i {
+    color: var(--primary-orange);
+    width: 20px;
+}
+
+/* --- Botão do Workshop --- */
+.btn-ws {
+    margin-top: 20px;
+    background: var(--primary-purple);
+    border-radius: 12px;
+    transition: background 0.3s;
+}
+
+.btn-ws:hover {
+    background: var(--primary-orange);
+}
+
+/* --- Animações --- */
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* --- Responsividade --- */
+@media (max-width: 900px) {
+    .workshops-hero {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .hero-image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .hero-image {
+        max-height: 200px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .workshops-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .concurso-section {
+        margin: 30px 20px !important;
+        /* Corrige a margem lateral no mobile */
+        grid-template-columns: 1fr !important;
+    }
+}

@@ -1,264 +1,188 @@
-/* Layout Geral */
-main {
-    background: #f9f9f9;
-    min-height: 100vh;
-    padding: 0 80px;
+/* --- ESTILO GLOBAL LANUPER 2026 (Refatorado) --- */
+
+:root {
+    --lanuper-purple: #6a3093;
+    --lanuper-pink: #ff416c;
+    --lanuper-orange: #f47920;
+    --success-green: #25d366;
+    --text-main: #2d3436;
+    --text-light: #636e72;
+    --white: #ffffff;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+/* Hero Section - Visual mais imersivo */
+.course-hero {
+    padding: 80px 5%;
+    color: var(--white);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito Parallax suave */
+}
+
+.course-hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin-bottom: 1rem;
+}
+
+.course-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Diferentes fundos com overlays elegantes */
+.math-bg { background: linear-gradient(rgba(15, 12, 41, 0.85), rgba(48, 43, 99, 0.85)), url('../images/math-pattern.jpg'); }
+.web-ia  { background: linear-gradient(135deg, rgba(15, 12, 41, 0.9), rgba(106, 42, 148, 0.8)); }
+.music   { background: linear-gradient(135deg, rgba(78, 52, 46, 0.9), rgba(141, 110, 99, 0.8)); }
+.edu     { background: linear-gradient(135deg, rgba(26, 35, 126, 0.9), rgba(57, 73, 171, 0.8)); }
+
+/* Grid e Layout */
 .grid-two-columns {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.6fr 0.9fr; /* Ajuste na proporção para melhor leitura */
     gap: 50px;
-    padding: 60px 0;
-    /* Alinha as colunas pelo topo */
-    align-items: start;
+    max-width: 1300px;
+    margin: -40px auto 60px; /* Faz o conteúdo "subir" um pouco sobre o hero */
+    padding: 0 5%;
+    position: relative;
+    z-index: 10;
 }
 
-/* Coluna Conteúdo */
-.section-title {
-    color: #1e3a8a;
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-    border-bottom: 3px solid #FFC107;
-    display: inline-block;
+/* Tabelas Estilizadas */
+.schedule-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
 
-.course-hero-image {
-    width: 50%;
-    border: double 10px rgba(15, 40, 230, 0.456);
-    border-radius: 25px;
-    /* Corrigido: era 'o auto' */
-    margin: 20px auto;
-}
-
-.course-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: #f803031b;
-    border-radius: 15px;
+.schedule-table th {
+    background: var(--lanuper-purple);
+    color: var(--white);
     padding: 20px;
-    /* Adicionado padding para não colar o conteúdo */
-    border-bottom: #f70404 5px solid;
-    border-top: #f70404 5px solid;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-.content-left {
-    display: flex;
-    flex-direction: column;
-    /* Alinhamento ao topo dentro da div */
-    justify-content: flex-start;
-    border-radius: 25px;
-    border-bottom: #f79604 6px solid;
-    border-top: #f79604 6px solid;
-    padding: 30px;
-    /* Padding interno para o conteúdo não colar na borda laranja */
-    background: #fff;
-    /* Opcional: para destacar do fundo cinza */
+.schedule-table td {
+    padding: 18px;
+    border-bottom: 1px solid #f1f2f6;
+    color: var(--text-main);
+    font-weight: 500;
 }
 
+.schedule-table tr:last-child td { border-bottom: none; }
+
+/* Timeline com Design Moderno */
 .timeline {
-    border-left: 2px solid #e0e0e0;
-    padding-left: 25px;
-    margin-top: 10px;
+    border-left: 3px solid #dfe6e9; /* Linha mais discreta */
+    padding-left: 35px;
+    margin: 40px 0;
+    position: relative;
 }
 
 .step {
-    margin-bottom: 30px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.step::before {
+    content: '';
+    position: absolute;
+    left: -43px; /* Alinhado à nova margem */
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: var(--white);
+    border: 4px solid var(--lanuper-pink);
+    border-radius: 50%;
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.step:hover::before {
+    background: var(--lanuper-pink);
+    transform: scale(1.2);
 }
 
 .step h3 {
-    color: #333;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+    color: var(--lanuper-purple);
+    margin-bottom: 8px;
+    font-size: 1.4rem;
 }
 
-.step.highlight-simulado {
-    background: #f8faff;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #1e3a8a;
+/* Cards Laterais (Sticky) */
+.sticky-box {
+    position: sticky;
+    top: 40px;
+    z-index: 5;
 }
 
-.badge-intensivo {
-    background: #1e3a8a;
-    color: white;
-    font-size: 0.7rem;
-    padding: 3px 8px;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-/* Coluna Lateral */
 .info-card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-}
-
-.payment-card {
-    border-top: 5px solid #1e3a8a;
-    border-bottom: 5px solid #1e3a8a;
+    background: var(--white);
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0,0,0,0.03);
     text-align: center;
 }
 
 .price-value {
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 900;
-    color: #1e3a8a;
-    margin: 10px 0;
-}
-
-.Curso-Math {
-    list-style: none;
-    color: #d57e04;
-}
-
-.benefit-list {
-    list-style: none;
-    text-align: left;
-    margin: 20px 0;
-}
-
-
-.benefit-list li {
-    margin-bottom: 12px;
-    font-size: 0.95rem;
-}
-
-.btn-enroll {
+    color: var(--lanuper-pink);
+    margin: 15px 0;
     display: block;
-    background: #1e3a8a;
-    color: white;
+}
+
+/* Botão WhatsApp com Efeito de Sombra */
+.btn-enroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--success-green);
+    color: var(--white);
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
     text-decoration: none;
-    padding: 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
+    transition: var(--transition);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
 }
 
 .btn-enroll:hover {
-    background: #0d2561;
+    background: #128c7e;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
 }
 
-/* Radar Style */
-.radar-card {
-    border-top: 5px solid #2afd05;
-    border-bottom: 5px solid #2afd05;
-}
-
-.radar-title {
-    color: #1e3a8a;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.edital-item {
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #eee;
-    text-align: left;
-}
+/* Radar e Tags */
+.radar-card { background: #fdfdfd; border-top: 5px solid #3b82f6; }
 
 .status-tag {
-    font-size: 0.6rem;
-    font-weight: bold;
-    padding: 2px 5px;
-    border-radius: 3px;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 700;
     text-transform: uppercase;
 }
+.status-previsto { background: #fff9db; color: #f08c00; }
+.status-aberto { background: #ebfbee; color: #2b8a3e; }
 
-.status-previsto {
-    background: #fef9c3;
-    color: #854d0e;
-}
-
-.status-aberto {
-    background: #dcfce7;
-    color: #166534;
-}
-
-.status-temporario {
-    background: #e0f2fe;
-    color: #0369a1;
-}
-
-.edital-item strong {
-    display: block;
-    font-size: 0.9rem;
-    margin: 4px 0;
-}
-
-.edital-item small {
-    font-size: 0.8rem;
-    color: #777;
-}
-
-/* Responsivo */
-@media (max-width: 900px) {
-    main {
-        padding: 0 20px;
-    }
-
-    .grid-two-columns {
-        grid-template-columns: 1fr;
-    }
-
-    .course-hero-image {
-        width: 80%;
-    }
-}
-
-/* Estilo do Banner Promocional */
-.promo-banner {
-    background: linear-gradient(90deg, #ff4b2b, #ff416c);
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    font-weight: bold;
-    font-family: sans-serif;
-    position: relative;
-    z-index: 1001;
-    overflow: hidden;
-}
-
-.promo-content {
-    display: inline-block;
-    animation: pulse 2s infinite; /* Movimento de pulsação */
-}
-
-.promo-link {
-    background: white;
-    color: #ff416c;
-    padding: 4px 12px;
-    border-radius: 20px;
-    text-decoration: none;
-    margin-left: 15px;
-    font-size: 0.9rem;
-    transition: 0.3s;
-    display: inline-block;
-}
-
-.promo-link:hover {
-    background: #eeeeee;
-    transform: scale(1.05);
-}
-
-/* Animação de Movimento */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-    100% { transform: scale(1); }
-}
-
-/* Ajuste para telas menores */
-@media (max-width: 600px) {
-    .promo-banner { font-size: 0.8rem; padding: 15px 5px; }
-    .promo-link { display: block; margin: 8px auto 0; width: fit-content; }
+/* Responsividade Aprimorada */
+@media (max-width: 1024px) {
+    .grid-two-columns { grid-template-columns: 1fr; margin-top: 20px; }
+    .course-hero h1 { font-size: 2.5rem; }
+    .sticky-box { position: static; }
 }
