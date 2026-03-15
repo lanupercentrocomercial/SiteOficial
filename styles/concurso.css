@@ -180,6 +180,12 @@
 .status-previsto { background: #fff9db; color: #f08c00; }
 .status-aberto { background: #ebfbee; color: #2b8a3e; }
 
+.edital-item{
+    margin-top: 30px;
+    text-align: justify;
+    padding: 0 auto;
+    }
+
 /* Responsividade Aprimorada */
 @media (max-width: 1024px) {
     .grid-two-columns { grid-template-columns: 1fr; margin-top: 20px; }
