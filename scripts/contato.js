@@ -42,7 +42,7 @@ document.getElementById('form-contato').addEventListener('submit', function (e) 
                 const interesseFinal = res.interesse || interesseSelecionado;
                 const dataFinal = res.dataEnvio || new Date().toLocaleDateString('pt-BR');
 
-                const meuNumero = "5521988874861";
+                const meuNumero = "5521980236867";
                 const textoMensagem =
                     `*NOVO CONTATO LANUPER*\n\n` +
                     `*Nome:* ${nomeFinal}\n` +
